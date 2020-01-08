@@ -1,0 +1,24 @@
+
+<h1>Movie List</h1>
+<br/>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor = "let movie of movies">
+        <th scope="row">{{movie.id}}</th>
+        <td>{{movie.name}}</td>
+        <td>
+            <div class="btn-container">
+                <button class="btn btn-primary" (click)="addToCart(movie)" [disabled]="movie.isAdded">{{movie.isAdded ? 'Added': 'Add'}}</button>
+                <button class="btn btn-danger" (click)="removeFromCart(movie)" [disabled]="!movie.isAdded">Remove</button>
+            </div>            
+        </td>
+      </tr>
+    </tbody>
+  </table>

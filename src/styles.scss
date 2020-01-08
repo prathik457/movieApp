@@ -1,0 +1,43 @@
+/* You can add global styles to this file, and also import other style files */
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    background: purple;
+    padding: 1em 0;
+
+    a {
+        color: white;
+    }
+
+    nav {
+        float: right;
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            display: flex;
+
+            li a {
+                padding: 1em;
+                text-decoration: none;
+
+                &:hover {
+                    background: darken(purple, 10%);
+                    text-decoration: none;
+                    color: darken(white, 40%);
+                }
+            }
+        }
+    }
+}

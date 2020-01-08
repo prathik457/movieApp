@@ -1,0 +1,19 @@
+
+<h1>Cart</h1>
+<br/>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor = "let movie of movies">
+        <th scope="row" *ngIf="movie.isAdded">{{movie.id}}</th>
+        <td *ngIf="movie.isAdded">{{movie.name}}</td>
+        <td *ngIf="movie.isAdded">
+            <button class="btn btn-danger" (click)="removeFromCart(movie)">Remove</button>
+        </td>
+      </tr>
+    </tbody>
